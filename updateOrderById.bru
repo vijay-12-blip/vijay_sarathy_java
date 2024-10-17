@@ -1,0 +1,21 @@
+meta {
+  name: updateOrderById
+  type: http
+  seq: 5
+}
+
+put {
+  url: 127.0.0.1:8100/api/v1/orders/3
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "productId": 301,
+    "customerId": 3001,
+    "orderDate": "2024-10-08",
+    "status": "pending",
+    "totalAmount": 3333
+  }
+}

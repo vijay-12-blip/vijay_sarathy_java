@@ -1,0 +1,22 @@
+meta {
+  name: placeOrder
+  type: http
+  seq: 1
+}
+
+post {
+  url: 127.0.0.1:8100/api/v1/orders
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "orderId": 3,
+    "productId": 333,
+    "customerId": 3001,
+    "orderDate": "2024-10-08",
+    "status": "pending",
+    "totalAmount": 3500
+  }
+}
